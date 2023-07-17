@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --primary-color:steelblue;
+    --secondary-color:rgb(141, 248, 230);
+}
 
 .field {
     border: 1px solid black;
@@ -88,3 +92,59 @@ h1 {
         top: 200px;
     }
 }
+.h1-var{
+    color: white;
+    display: inline;
+    background-color: var(--primary-color);
+    padding:10px;
+    border-radius:5px;
+    text-align: center;
+   margin-top: 30px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+  }
+  .sidebar{
+    background-color: #ebe7e7;
+    /* width: 200px; */
+    color: aliceblue;
+    height: 100vh;
+  }
+  .main{
+    background-color: brown;
+  }
+  .container-2 {
+    /* display: flex; */
+    /* gap: 20px; */
+    display: grid;
+    grid-template-columns: 300px calc(100% - 300px);
+  }
+  /* .main{
+    flex: 1;
+  } */
+  ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: center;
+    height: 100vh;
+  }
+  li{
+    text-align: center;background-color: #9bf0eb;
+    padding: 20px;
+    font-size: 1.5rem;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: blueviolet;
+    list-style: none;
+    box-shadow: 8px 8px 5px 5px gray;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  h2{
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 20px;
+    color: var(--primary-color);
+  }
