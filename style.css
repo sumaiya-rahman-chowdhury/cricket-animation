@@ -1,27 +1,90 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.field{
+
+.field {
     border: 1px solid black;
 }
-.bat{
+
+.bat {
     transition: transform 0.5s ease-in;
 }
-.field:hover .bat{
+
+.field:hover .bat {
     transform: rotate(-60deg);
     transform-origin: top right;
 }
-.ball{
+
+.ball {
     height: 50px;
     width: 50px;
     background-color: red;
     border-radius: 50%;
     position: relative;
     left: 500px;
-    transition: transform .1s ease-out .3s;
+    transition: transform .1s ease-out .5s;
 }
-.field:hover .ball{
-   transform: translate(600px,-500px);
-   
+
+.field:hover .ball {
+    transform: translate(600px, -500px);
+
+}
+
+h1 {
+    margin: 20px;
+    text-align: center;
+    text-decoration: underline;
+    color: blueviolet;
+}
+
+@keyframes pingpong {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 400px;
+        background-color: tomato;
+    }
+}
+
+.stage {
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 20px;
+    background-color: blueviolet;
+}
+
+.ball2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: yellow;
+    position: relative;
+    animation: pingpong 3s ease 1s infinite alternate;
+    animation: bounce 3s ease-in-out 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    25% {
+        left: 150px;
+        top: 200px;
+    }
+
+    50% {
+        left: 300px;
+        top: 0;
+    }
+
+    100% {
+        left:400px ;
+        top: 200px;
+    }
 }
